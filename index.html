@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie_Counter | Module Pattern</title>
+    <!-- Bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap" rel="stylesheet">
+</head>
+
+<body style="font-family: 'Baloo Paaji 2', cursive;">
+    <nav class="navbar navbar-dark bg-primary mb-1">
+        <div class="container">
+            <i class="bi bi-calculator text-white" style="font-size: 2rem;"></i>
+            <a href="#" class="navbar-brand fs-2 fw-bold text-white mx-auto">TRACALORIE</a>
+            <button class="clear-btn btn btn-light" type="button">CLEAR ALL</button>
+        </div>
+    </nav>
+    <br><br>
+    <div class="container shadow p-3 mb-5 bg-body rounded">
+        <div class="card">
+            <div class="card-header">Add Meal / Food Items</div>
+            <div class="card-body">
+                <form class="row">
+                    <div class="col-md-6 mb-2">
+                        <label for="item-name" class="form-label">Meal</label>
+                        <input type="text" class="form-control" id="item-name" placeholder="Add item">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="item-calories" class="form-label">Calories</label>
+                        <input type="number" class="form-control" id="item-calories" placeholder="Add Calories">
+                    </div>
+                </form>
+                <br>
+                <button class="add-btn btn btn-primary m-1">
+                    <i class="bi bi-plus-square"></i>&nbsp
+                    Add Meal
+                </button>
+                <button class="update-btn btn btn-warning m-1">
+                    <i class="bi bi-pencil-square"></i>&nbsp
+                    Update Item
+                </button>
+                <button class="delete-btn btn btn-danger m-1">
+                    <i class="bi bi-x-square"></i>&nbsp
+                    Delete Item
+                </button>
+                <button class="back-btn btn btn-secondary m-1 float-end">
+                    <i class="bi bi-box-arrow-left"></i>&nbsp
+                    Back
+                </button>
+            </div>
+        </div>
+
+        <br><br>
+        <!-- Calorie Count -->
+        <h2 class="text-center mb-3">Total Calories: <span class="total-calories">0</span></h2>
+        
+        <!-- item-list -->
+        <div class="container list px-4">
+            <ul id="item-list" class="list-group mb-3" style="font-family: 'Architects Daughter', cursive;">
+                <!-- <li id="item-0" class="list-group-item p-3">
+                    <strong>Egg rice : </strong> <span class="fst-italic">800 Calories</span>
+                    <a href="#" class="float-end"><i class="edit-item bi bi-pencil-fill"></i></a>
+                </li>
+                <li id="item-1" class="list-group-item p-3">
+                    <strong>Pizza : </strong> <span class="fst-italic">500 Calories</span>
+                    <a href="#" class="float-end"><i class="edit-item bi bi-pencil-fill"></i></a>
+                </li>-->
+            </ul>
+        </div>
+
+    </div>
+
+    <footer class="card" style="position: relative; bottom: 15px; width: 95vw; margin: auto;">
+        <div class="card-content p-2">
+            <p class="card-text text-center">Calorie Tracker Application &copy</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
